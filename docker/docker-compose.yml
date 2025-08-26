@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.app
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=docker
+      - DEBUG=false
+    volumes:
+      - ../config/settings.env:/app/config/settings.env:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - lane-detection
+
+  tests:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.tests
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      - TEST_API_BASE_URL=http://app:8000
+      - ENVIRONMENT=test
+    volumes:
+      - ../test-results:/app/test-results
+      - ../allure-results:/app/allure-results
+    networks:
+      - lane-detection
+    profiles:
+      - testing
+
+networks:
+  lane-detection:
+    driver: bridge
+
+volumes:
+  test-results:
+  allure-results:

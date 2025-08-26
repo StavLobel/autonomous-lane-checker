@@ -1,3 +1,56 @@
-# Cursor project rules (version-controlled directory can be kept, but ignore local nested artifacts)
+# Cursor AI editor rules
 .cursor/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# PyTest
+.pytest_cache/
+.coverage
+htmlcov/
+test-results/
+allure-results/
+
+# Environment variables
+.env
+config/settings.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
