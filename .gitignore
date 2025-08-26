@@ -54,3 +54,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Handoff
+TORCH.md
