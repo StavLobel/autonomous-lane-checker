@@ -10,9 +10,19 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 - **Minor Tasks**: 24
 - **Status**: Foundation epic complete, ready for feature development
 
+## Milestone Mapping
+
+- **Milestone #1**: ALC-EP001: Foundation (8 tasks) ✅ **COMPLETE**
+- **Milestone #2**: ALC-EP002: Lane Detection Feature (12 tasks)
+- **Milestone #3**: ALC-EP003: Functional Tests (7 tasks)
+- **Milestone #4**: ALC-EP004: Negative + Edge Tests (5 tasks)
+- **Milestone #5**: ALC-EP005: Performance Checks (3 tasks)
+- **Milestone #6**: ALC-EP006: CI/CD Pipelines + Reporting (10 tasks)
+- **Milestone #7**: ALC-EP007: Docs Polish + Public Showcase (6 tasks)
+
 ## Epic Progress
 
-### ALC-EP001: Foundation (P0) - 8 tasks ✅ **COMPLETE**
+### ALC-EP001: Foundation (P0) - 8 tasks ✅ **COMPLETE** - Milestone #1
 - [x] **#8** [ALC-EP001-M01] Scaffold project structure per SRD (Major, P0)
 - [x] **#9** [ALC-EP001-M02] FastAPI app bootstrap in src/api/main.py (Major, P0)
 - [x] **#10** [ALC-EP001-M03] Configuration module config.py (Major, P1)
@@ -24,7 +34,7 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 **Progress**: 7/8 (87.5%) - Foundation complete, ready for feature development
 
-### ALC-EP002: Lane Detection Feature (P0) - 12 tasks
+### ALC-EP002: Lane Detection Feature (P0) - 12 tasks - Milestone #2
 - [ ] **#16** [ALC-EP002-M01] OpenCV pipeline: grayscale → blur → Canny (Major, P0)
 - [ ] **#17** [ALC-EP002-M02] ROI trapezoid masking (Major, P0)
 - [ ] **#18** [ALC-EP002-M03] HoughLinesP detection (Major, P0)
@@ -40,7 +50,7 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 **Progress**: 0/12 (0%) - Core feature implementation needed
 
-### ALC-EP003: Functional Tests (P0) - 7 tasks
+### ALC-EP003: Functional Tests (P0) - 7 tasks - Milestone #3
 - [ ] **#28** [ALC-EP003-M01] Set up PyTest + Playwright API client fixtures (Major, P0)
 - [ ] **#29** [ALC-EP003-M02] Happy path test (Major, P0)
 - [ ] **#30** [ALC-EP003-M03] Overlay validation test (Major, P1)
@@ -51,7 +61,7 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 **Progress**: 0/7 (0%) - Test infrastructure needed
 
-### ALC-EP004: Negative + Edge Tests (P1) - 5 tasks
+### ALC-EP004: Negative + Edge Tests (P1) - 5 tasks - Milestone #4
 - [ ] **#35** [ALC-EP004-M01] Negative: missing input, corrupt bytes, invalid params (Major, P1)
 - [ ] **#36** [ALC-EP004-M02] Negative: oversized file (MAX_IMAGE_MB) (Major, P1)
 - [ ] **#37** [ALC-EP004-M03] Edge: small/large, grayscale, night, extreme aspect ratios (Major, P1)
@@ -60,14 +70,14 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 **Progress**: 0/5 (0%) - Error handling and edge case testing needed
 
-### ALC-EP005: Performance Checks (P1) - 3 tasks
+### ALC-EP005: Performance Checks (P1) - 3 tasks - Milestone #5
 - [ ] **#40** [ALC-EP005-M01] Latency p95 threshold on /lanes (Major, P1)
 - [ ] **#41** [ALC-EP005-M02] Stability: repeatability without memory bloat (Major, P2)
 - [ ] **#42** [ALC-EP005-m01] Payload size checks (Minor, P2)
 
 **Progress**: 0/3 (0%) - Performance validation needed
 
-### ALC-EP006: CI/CD Pipelines + Reporting (P0) - 10 tasks
+### ALC-EP006: CI/CD Pipelines + Reporting (P0) - 10 tasks - Milestone #6
 - [ ] **#43** [ALC-EP006-M01] Workflow: Lint & Security (Major, P0)
 - [ ] **#44** [ALC-EP006-M02] Workflow: Unit tests (Major, P1)
 - [ ] **#45** [ALC-EP006-M03] Workflow: API tests (functional + negative) on PRs (Major, P0)
@@ -80,7 +90,7 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 **Progress**: 0/10 (0%) - CI/CD infrastructure needed
 
-### ALC-EP007: Docs Polish + Public Showcase (P2) - 6 tasks
+### ALC-EP007: Docs Polish + Public Showcase (P2) - 6 tasks - Milestone #7
 - [ ] **#52** [ALC-EP007-M01] Finalize docs alignment (Major, P2)
 - [ ] **#53** [ALC-EP007-M02] README: overview, badges, links (Major, P2)
 - [ ] **#54** [ALC-EP007-M03] Publish docs and Allure to GitHub Pages (Major, P2)
@@ -145,11 +155,13 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 
 - All issues are properly labeled with `type:epic|major|minor` and `priority:P0|P1|P2|P3`
 - Each task links to its epic via the `epic:ALC-EP00X` label
+- All issues are assigned to their respective milestones (1-7)
 - Issues follow the naming convention from `docs/TASKS.md`
 - Use GitHub's saved searches for filtering:
   - P0 open: `is:issue is:open label:"priority:P0"`
   - My tasks: `is:issue is:open assignee:@me`
   - By epic: `is:issue is:open label:"epic:ALC-EP001"`
+  - By milestone: `is:issue is:open milestone:"ALC-EP001: Foundation"`
 
 ---
 *Last Updated: 2025-08-26*
