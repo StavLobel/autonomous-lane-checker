@@ -45,6 +45,12 @@ This test plan defines the strategy, scope, and test cases for verifying the Fas
 ### 4.2 Negative Tests
 | ID | Title | Description | Expected Result |
 |----|-------|-------------|-----------------|
+| LANE-NEG-006 | Fuzz - Random Params | Generate random invalid values for ROI, thresholds using Faker | 422 validation error |
+| LANE-NEG-007 | Fuzz - Random Strings | Send random strings in numeric fields using Faker | 422 validation error |
+| LANE-NEG-008 | Fuzz - Random URLs | Submit random fake URLs with `image_url` param | 400/422 with error JSON |
+
+| ID | Title | Description | Expected Result |
+|----|-------|-------------|-----------------|
 | LANE-NEG-001 | Missing File | Call `POST /lanes` with no file | 422 with validation error |
 | LANE-NEG-002 | Corrupt Image Bytes | Submit broken image payload | 400 or 415 with error JSON |
 | LANE-NEG-003 | Unsupported Type | Submit `.txt` file | 415 unsupported media type |

@@ -31,3 +31,8 @@ The project is composed of three main components:
 - Pipeline builds app image, starts container, runs tests, and uploads artifacts.
 - Allure report publishing planned in a later milestone.
 
+
+
+### 5. Test Data Generation
+- In addition to static image sets, the test suite uses **Faker** to generate random inputs for fuzz testing.
+- Faker is integrated via `tests/utils/fake_data.py` to create random strings, numbers, and URLs.

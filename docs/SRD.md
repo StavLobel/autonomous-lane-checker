@@ -49,6 +49,12 @@ A self-contained, interview-ready demo that showcases end-to-end automation skil
 ---
 
 ## 3) Test strategy
+- Functional: happy path, no-markings, overlay checks
+- Negative: missing input, corrupt bytes, invalid params, oversized file
+- Edge: small/large images, grayscale, night, extreme aspect ratios
+- Performance: latency (p95 < threshold), stability, payload size
+- **Fuzz Testing with Faker**: generate random invalid params, strings, and URLs to stress input validation
+
 - **Functional**: happy path, no-markings, overlay checks
 - **Negative**: missing input, corrupt bytes, invalid params, oversized file
 - **Edge**: small/large images, grayscale, night, extreme aspect ratios

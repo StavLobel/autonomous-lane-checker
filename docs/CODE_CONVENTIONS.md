@@ -110,3 +110,12 @@ def detect_lanes(image: np.ndarray) -> LaneResult:
 ---
 
 By following these conventions, the project stays **clean, testable, and interview-ready**, while also demonstrating adherence to professional software engineering standards.
+
+
+---
+
+## 10. Test Data Generation with Faker
+- Use **Faker** for negative/fuzz testing only.
+- Keep functional/edge/performance tests deterministic (no Faker).
+- Faker utilities live in `tests/utils/fake_data.py`.
+- Purpose: simulate random invalid inputs (URLs, strings, numbers) to validate API robustness.
