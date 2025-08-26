@@ -1,0 +1,3 @@
+# Cursor project rules (version-controlled directory can be kept, but ignore local nested artifacts)
+.cursor/
+
