@@ -8,12 +8,12 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 - **Epics**: 7
 - **Major Tasks**: 25
 - **Minor Tasks**: 24
-- **Status**: All issues created and ready for work
+- **Status**: 1 task completed, work in progress
 
 ## Epic Progress
 
 ### ALC-EP001: Foundation (P0) - 8 tasks
-- [ ] **#8** [ALC-EP001-M01] Scaffold project structure per SRD (Major, P0)
+- [x] **#8** [ALC-EP001-M01] Scaffold project structure per SRD (Major, P0)
 - [ ] **#9** [ALC-EP001-M02] FastAPI app bootstrap in src/api/main.py (Major, P0)
 - [ ] **#10** [ALC-EP001-M03] Configuration module config.py (Major, P1)
 - [ ] **#11** [ALC-EP001-M04] Dockerfiles and docker-compose.yml (Major, P0)
@@ -22,7 +22,7 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 - [ ] **#14** [ALC-EP001-m02] Add .gitignore and tooling configs (Minor, P2)
 - [ ] **#15** [ALC-EP001-m03] Seed data/images sample set (Minor, P2)
 
-**Progress**: 0/8 (0%) - Foundation work needed
+**Progress**: 1/8 (12.5%) - Foundation work started
 
 ### ALC-EP002: Lane Detection Feature (P0) - 12 tasks
 - [ ] **#16** [ALC-EP002-M01] OpenCV pipeline: grayscale → blur → Canny (Major, P0)
@@ -154,4 +154,4 @@ This document tracks progress on all GitHub issues created from `docs/TASKS.md`.
 ---
 *Last Updated: 2025-08-26*
 *Total Issues: 56*
-*Overall Progress: 0/56 (0%)*
+*Overall Progress: 1/56 (1.8%)*
